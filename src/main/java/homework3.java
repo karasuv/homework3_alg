@@ -23,22 +23,46 @@ public class homework3 {
         System.out.println(find);
 
         System.out.println(".............задание № 2............");
-
+        System.out.println(".....testQueue............");
         testQueue();
+        System.out.println(".....testDueue............");
+        testDueue();
 
     }
 
     private static void testQueue() {
 
-        //  Queue<Integer> queue = new QueueImpl<>(5);
+
+        Queue<Integer> queue = new PriorityQueue<>(5);
+        System.out.println("add element: " + queue.insert(34));
+        System.out.println("add element: " + queue.insert(12));
+        System.out.println("add element: " + queue.insert(20));
+        System.out.println("add element: " + queue.insert(16));
+        System.out.println("add element: " + queue.insert(14));
+        System.out.println("add element: " + queue.insert(17));
+
+
+        queue.display();
+        System.out.println("remove: " + queue.remove());
+        queue.display();
+
+        System.out.println("add element: " + queue.insert(17));
+        queue.display();
+        System.out.println("remove: " + queue.remove());
+        queue.display();
+        System.out.println("remove: " + queue.remove());
+        queue.display();
+        System.out.println("remove: " + queue.remove());
+        queue.display();
+        System.out.println("remove: " + queue.remove());
+        queue.display();
+
+    }
+    private static void testDueue() {
+
+
         Deque<Integer> deque = new DequeImpl<>(5);
-        //Queue<Integer> queue = new PriorityQueue<>(5);
-//        System.out.println("add element: " + queue.insert(34));
-//        System.out.println("add element: " + queue.insert(12));
-//        System.out.println("add element: " + queue.insert(20));
-//        System.out.println("add element: " + queue.insert(16));
-//        System.out.println("add element: " + queue.insert(14));
-//        System.out.println("add element: " + queue.insert(17));
+
 
 
         System.out.println("add right element: " + deque.insertRight(34));
@@ -46,7 +70,7 @@ public class homework3 {
         System.out.println("add right element: " + deque.insertRight(20));
         System.out.println("add right element: " + deque.insertRight(16));
         System.out.println("add right element: " + deque.insertRight(14));
-        //  System.out.println("add element: " + deque.insertLeft(17));
+          System.out.println("add element: " + deque.insertLeft(17));
 
         deque.display();
         System.out.println("remove left: " + deque.removeLeft());
@@ -70,22 +94,6 @@ public class homework3 {
 
 
 
-//        queue.display();
-//        System.out.println("remove: " + queue.remove());
-//        queue.display();
-//
-//        System.out.println("add element: " + queue.insert(17));
-//        queue.display();
-//        System.out.println("remove: " + queue.remove());
-//        queue.display();
-//        System.out.println("remove: " + queue.remove());
-//        queue.display();
-//        System.out.println("remove: " + queue.remove());
-//        queue.display();
-//        System.out.println("remove: " + queue.remove());
-//        queue.display();
-
     }
-
 
 }
